@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Professional - Sairga Andari</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --accent: #ec4899;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --glass: rgb(245, 198, 235);
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* LEFT COLUMN (Sidebar/Header) */
+        .sidebar {
+            flex: 1;
+            min-width: 300px;
+            background: rgb(245, 198, 235);
+            padding: 40px;
+            text-align: center;
+            border-right: 1px solid #f0f0f0;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 4px solid rgb(245, 198, 235);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgb(245, 198, 235);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .contact-link {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background: var(--primary);
+            padding: 12px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .contact-link:hover {
+            transform: scale(1.03);
+            background: var(--secondary);
+        }
+
+        /* RIGHT COLUMN (Content) */
+        .content {
+            flex: 2;
+            min-width: 350px;
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 8px;
+        }
+
+        .section-title i {
+            color: var(--primary);
+        }
+
+        p {
+            line-height: 1.6;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* INFO LIST */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-item label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #9ca3af;
+            font-weight: 700;
+        }
+
+        .info-item span {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* EDUCATION & ACHIEVEMENT TAGS */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tag i {
+            color: var(--accent);
+        }
+
+        .tag:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .sidebar { border-right: none; border-bottom: 1px solid #f0f0f0; }
+            .info-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <img src="irga.jpg" alt="Sairga Andari" class="profile-img">
+        <h1>Sairga Andari</h1>
+        <div class="badge">Siswa & Peneliti Muda</div>
+        
+        <div style="margin-top: 30px; text-align: left;">
+            <div class="info-item" style="margin-bottom: 15px;">
+                <label><i class="fas fa-envelope"></i> Email</label>
+                <span>Sairgaandaeri@gmail.com</span>
+            </div>
+            <div class="info-item" style="margin-bottom: 15px;">
+                <label><i class="fas fa-phone"></i> WhatsApp</label>
+                <span>+62 823-7164-4393</span>
+            </div>
+        </div>
+
+        <a href="https://drive.google.com/drive/folders/15bWLsElB7lECiDNtnNMxn4idewBXwK8c" class="contact-link" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Lihat Portofolio Karya
+        </a>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <div class="section-title"><i class="fas fa-user"></i> Tentang Saya</div>
+            <p class="about-text">
+                Sairga Andari atau yang akrab disapa <strong>Irga</strong>, saya adalah seorang pelajar dengan minat mendalam di bidang <strong> sains dan kimia</strong>. Saya memiliki semangat tinggi untuk terus belajar dari berkreasi melalui berbagai proyek imiah. 
+            <p>
+                Selain kegiatan akademik saya juga aktif menulis judul judul penelitian, membaca, dan mendalami teknik penulisan penelitian yang efektif. Saya bercita cita menjadi seorang penulis dan peneliti yang dapat memberikan kontribusi positif bagi masyarakat, saya terus mengembangkan diri melalui berbagai proyek kreatif dan eksplorasi mandiri. 
+            </p>
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title"><i class="fas fa-id-card"></i> Informasi Pribadi</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <label>Tempat Lahir</label>
+                    <span>Lampung Tengah</span>
+                </div>
+                <div class="info-item">
+                    <label>Tanggal Lahir</label>
+                    <span>05 Mei 2008</span>
+                </div>
+                <div class="info-item">
+                    <label>Umur</label>
+                    <span>18 Tahun</span>
+                </div>
+                <div class="info-item">
+                    <label>Agama</label>
+                    <span>Islam</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title"><i class="fas fa-graduation-cap"></i> Riwayat Pendidikan</div>
+            <div class="tag-container">
+                <div class="tag"><i class="fas fa-school"></i> SMA Gunung Madu (2023-2026)</div>
+                <div class="tag"><i class="fas fa-school"></i> SMP Satya Dharma Sudjana (2020-2023)</div>
+                <div class="tag"><i class="fas fa-school"></i> SDN 4 Gunung Madu (2014-2020)</div>
+                <div class="tag"><i class="fas fa-child"></i> TK Satya Dharma (2013-2014)</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title"><i class="fas fa-trophy"></i> Pencapaian</div>
+            <div class="tag-container">
+                <div class="tag" style="border-left: 4px solid #34d399;"><i class="fas fa-award"></i> Lolos OPSI (Olimpiade Penelitian Siswa)</div>
+                <div class="tag" style="border-left: 4px solid #34d399;"><i class="fas fa-medal"></i> Peserta Senam Tingkat Provinsi</div>
+                <div class="tag" style="border-left: 4px solid #34d399;"><i class="fas fa-medal"></i> Peserta Pemain Bulutangkis Tingkat Kabupaten</div>
+            </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
